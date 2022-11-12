@@ -4,6 +4,7 @@ import Searchbar from './Searchbar';
 import { useState } from 'react';
 
 
+
 // list of fake data to display before API is added
 const posts = [
   { id: '1', name: 'Green Hill' },
