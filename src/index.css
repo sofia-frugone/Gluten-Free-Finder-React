@@ -38,36 +38,5 @@
   color: #3DB191;
 }
 
-/* suburb filter styles */
 
-.visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
-input {
-  display: flex;
-  height: 27px;
-  width: 300px;
-  margin: 14px;
-  padding: 5px;
-  font-size: 15px;
-  border-top-style: hidden;
-  border-right-style: hidden;
-  border-left-style: hidden;
-  border-bottom-style: hidden;
-  background-color: #F5F5F5;
-}
-
-ul {
-  text-align: left;
-  width: 400px;
-  border: 15px #FFFFFF;
-  box-shadow: 1px 10px #888888;
-}
 
