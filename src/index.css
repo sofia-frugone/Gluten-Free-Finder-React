@@ -4,7 +4,7 @@
 * {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  color: #ffffff;
+  
 }
 
 /* navbar styles */
@@ -31,9 +31,16 @@
   margin-left: 16px;
   text-decoration: none;
   padding: 6px;
+  color: #ffffff;
 }
 .navbar a:hover {
   color: #3DB191;
 }
 
 /* filter styles */
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
