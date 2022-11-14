@@ -1,0 +1,19 @@
+{
+    "card": [
+        {
+            "title": "Mad Mex",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo.",
+            "id": "1"
+        },
+        {
+            "title": "Sushi Hub",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo.",
+            "id": "2"
+        },
+        {
+            "title": "Lusso",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo.",
+            "id": "3"
+        }
+    ]
+}
