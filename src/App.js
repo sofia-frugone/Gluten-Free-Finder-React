@@ -2,6 +2,7 @@ import './App.css';
 import SignUp from './components/SignUp'
 import Home from './components/Home'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
+import Footer from './components/Footer'
 
 
 
@@ -38,6 +39,7 @@ const App = () => {
             <Route path="/signup" element={<SignUp />}/>
 
           </Routes>
+        <Footer />
         </BrowserRouter>
 
         
