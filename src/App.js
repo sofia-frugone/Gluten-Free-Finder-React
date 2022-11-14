@@ -3,6 +3,8 @@ import SignUp from './components/SignUp'
 import Home from './components/Home'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 import Footer from './components/Footer'
+import CardDetails from './components/CardDetails';
+
 
 
 
@@ -38,6 +40,8 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />}/>
             <Route path="/signup" element={<SignUp />}/>
+            <Route path="/card/:id" element={< CardDetails/>}/>
+            
 
           </Routes>
         <Footer />

@@ -1,8 +1,20 @@
-export default function Home() {
-    return (
-      <div className="content">
-        <h1>Welcome...</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima animi nulla eveniet. At non consequuntur perferendis id voluptatem sapiente dolor animi exercitationem, commodi officiis eveniet laudantium quidem dolore labore sit.</p>
-      </div>
-    )
-  }
+import { useState, useEffect } from "react";
+import CardList from "./CardList";
+import useFetch from "./useFetch";
+
+
+const Home = () => {
+  const { data: card, isPending, error } = useFetch('http://localhost:8000/card')
+
+  
+    
+  return (  
+    <div className="home">
+      { error && <div>{ error }</div> }
+      { isPending && <div className="loading">Loading...</div>}
+      {card && <CardList card={card}/>}
+    </div>
+  );
+}
+ 
+export default Home;
