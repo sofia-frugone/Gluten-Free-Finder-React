@@ -31,7 +31,8 @@ const App = () => {
           <div className="links">
             <Link to="/">Home</Link> 
             <Link to="/signin">Sign In</Link>  
-            <Link to="/signup">Sign Up</Link>           
+            <Link to="/signup">Sign Up</Link>  
+            <Link to="/create">Create New Post</Link>          
           </div>
         </nav>
           <Routes>
