@@ -4,6 +4,7 @@ import Home from './components/Home'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 import Footer from './components/Footer'
 import CardDetails from './components/CardDetails';
+import SubmissionForm from './components/SubmissionForm';
 
 
 
@@ -41,6 +42,7 @@ const App = () => {
             <Route path="/" element={<Home />}/>
             <Route path="/signup" element={<SignUp />}/>
             <Route path="/card/:id" element={< CardDetails/>}/>
+            <Route path="/create" element={< SubmissionForm/>}/>
             
 
           </Routes>
