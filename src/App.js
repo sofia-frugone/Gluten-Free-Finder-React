@@ -5,6 +5,7 @@ import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 import Footer from './components/Footer'
 import CardDetails from './components/CardDetails';
 import SubmissionForm from './components/SubmissionForm';
+import SignIn from './components/SignIn';
 
 
 
@@ -43,6 +44,8 @@ const App = () => {
             <Route path="/signup" element={<SignUp />}/>
             <Route path="/card/:id" element={< CardDetails/>}/>
             <Route path="/create" element={< SubmissionForm/>}/>
+            <Route path="/signin" element={<SignIn />}/>
+
             
 
           </Routes>
