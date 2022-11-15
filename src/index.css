@@ -50,7 +50,7 @@ form{
   box-shadow: 3px 3px 5px 5px rgba(0,0,0,0.1);
   padding: 0px 60px;
   border-radius: 5px;
-  height: auto;
+  height: 700px;
   width: 500px;
 }
 
@@ -59,6 +59,7 @@ form{
   text-align: center;
   font-size: 24px;
   margin: 30px 0px;
+  padding-top: 70px;
 }
 
 .submit {
@@ -76,6 +77,43 @@ form{
   margin-top: 15px;
   margin-bottom: 30px;
 }
+
+.formInputs p {
+  font-size: 14px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  color: #060606;
+
+}
+
+.signUpMessage {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+  background-color: #013B4E;
+  box-shadow: 3px 3px 5px 5px rgba(0,0,0,0.1);
+  padding: 0px 60px;
+  border-radius: 5px;
+  height: 700px;
+  width: 500px;
+  
+
+}
+
+.signUpMessage h2 {
+  
+  color: white;
+  text-align: center;
+  padding-top: 150px;
+}
+
+.signUpMessage p {
+  color: white;
+  padding-top: 35px;
+
+}
+
+
 
 /* footer styles */
 footer {
