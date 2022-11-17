@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import CardList from "./CardList";
+import SearchBar from "./SearchBar";
 import useFetch from "./useFetch";
+
 
 
 const Home = () => {
@@ -10,6 +12,7 @@ const Home = () => {
     
   return (  
     <div className="home">
+      <SearchBar />
       { error && <div>{ error }</div> }
       { isPending && <div className="loading">Loading...</div>}
       {card && <CardList card={card}/>}
