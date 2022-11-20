@@ -3,7 +3,7 @@ import "./filters.css"
 const CuisineDropdown = () => {
     return (  
         <div className="cuisine-dropdown">
-            <label> Cuisine
+            <label> 
                 <select>
                     <option value="italian">Italian</option>
                     <option value="modern australian">Modern Australian</option>
@@ -12,8 +12,10 @@ const CuisineDropdown = () => {
                 </select>
 
             </label>
+            
 
         </div>
+        
     );
 }
  

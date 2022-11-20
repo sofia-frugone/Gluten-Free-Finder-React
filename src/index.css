@@ -14,7 +14,7 @@
   align-items: center;
   max-width: 100%;
   margin: 0 auto;
-  border-bottom: 1px solid #f2f2f2;
+  
   background-color: #013B4E;
 }
 
@@ -37,19 +37,30 @@
   color: #3DB191;
 }
 
+
+/* banner styles */
+.home img {
+  width: 100vw;
+  height: 500px;
+}
+
+
 /* form styles */
 .formInputs {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 50px;
 }
 
-form{
+form {
+  display: flex;
+  flex-direction: column;
   background-color: white;
   padding: 0px 60px;
   height: 700px;
-  width: 500px;
+  width: 400px;
 }
 
 .formInputs h1 {
@@ -108,6 +119,15 @@ form{
   color: white;
   padding-top: 35px;
 
+}
+
+/* filter styles */
+
+.search-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 

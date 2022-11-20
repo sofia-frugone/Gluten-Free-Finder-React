@@ -1,4 +1,4 @@
-import FormInput from '../components/FormInputs'
+import FormInput from './FormInputs'
 import { useState } from "react";
 
 const SubmissionForm = () => {
