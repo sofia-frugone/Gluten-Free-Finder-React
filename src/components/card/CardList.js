@@ -1,7 +1,10 @@
 import "./card.css"
 import { Link } from 'react-router-dom'
 
+
 const CardList = ({ card }) => {
+
+  
     
     return (
         <div className="card-list">
