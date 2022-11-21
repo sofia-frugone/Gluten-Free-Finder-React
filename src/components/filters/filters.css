@@ -11,10 +11,14 @@
 }
 
 .search input {
-    width: 800px;
-    height: 15px;
+    border-radius: 3px;
+    padding: 15px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    border: none;
     outline: solid 1px #C7C7C7;
-    border-radius: 5px;
+    width: 830px;
+    
 }
 
 /* cuisine dropdown styles */
@@ -28,13 +32,14 @@
 }
 
 .cuisine-dropdown select {
-    width: 400px;
-    height: 44px;
+    border-radius: 3px;
+    padding: 15px;
+    margin-top: 5px;
+    margin-bottom: 25px;
     border: none;
     outline: solid 1px #C7C7C7;
-    border-radius: 5px;
-    color: #646464;
-    padding: 10px;
+    width: 400px;
+    
 }
 
 /* suburb searchbar styles */
@@ -49,11 +54,13 @@
 }
 
 .suburb-search input {
-    width: 370px;
-    height: 15px;
+    border-radius: 3px;
+    padding: 15px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    border: none;
     outline: solid 1px #C7C7C7;
-    border-radius: 5px;
-    margin: 0;
+    width: 400px;
 }
 
 /* button styles */
@@ -64,7 +71,7 @@
 }
 
 .search-button button {
-    width: 826px;
+    width: 400px;
     height: 40px;
     padding: 10px;
     border: none;

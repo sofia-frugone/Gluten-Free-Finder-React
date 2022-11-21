@@ -13,7 +13,7 @@ const Home = () => {
 
   return (  
     <div className="home">
-      <img src="./gff-banner.png" alt="home banner"/>
+      
       
       <SearchBar />
       <div className="search-filters">

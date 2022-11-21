@@ -1,5 +1,6 @@
 import FormInput from './FormInputs'
 import { useState } from "react";
+import "./submission.css"
 
 const SubmissionForm = () => {
     const [values, setValues] = useState({
@@ -104,17 +105,17 @@ const SubmissionForm = () => {
       console.log(values);
 
     return (  
-        <div className="formInputs">
+        <div className="submission">
                <form onSubmit={handleSubmit}>
                  <h1>Restaurant Submission Form</h1>
                  {inputs.map((input) => (
-                   <FormInput className="inputs" key={input.id} {...input} value={values[input.name]} onChange={onChange}/>
+                   <FormInput key={input.id} {...input} value={values[input.name]} onChange={onChange}/>
                   ))}
                   <label> File upload (Upload any supporting documents JPG, PNG, PDF files accepted)
                      <input type="file" />
                   </label>
                   
-                  <input className="submit" type="submit" />
+                  <button type="submit">Submit</button>
                </form>
              </div>
 

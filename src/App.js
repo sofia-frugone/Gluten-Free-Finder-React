@@ -1,10 +1,11 @@
 import './App.css';
 import Home from './components/Home'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
-import Footer from './components/Footer'
+
 import CardDetails from './components/card/CardDetails';
 import SubmissionForm from './components/forms/SubmissionForm';
 import Registration from './components/auth/Registration';
+import Footer from './components/Footer';
 
 
 
@@ -30,7 +31,7 @@ const App = () => {
             <Route path="/card/:id" element={< CardDetails/>}/>
             <Route path="/create" element={< SubmissionForm/>}/>
           </Routes>
-        <Footer />
+        <Footer/>
         </BrowserRouter>
       </div>
   );

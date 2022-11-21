@@ -1,4 +1,4 @@
-import "./formInputs.css"
+import "./submission.css"
 import { useState } from "react";
 
 const FormInput = (props) => {
@@ -9,7 +9,7 @@ const FormInput = (props) => {
     };
 
     return (  
-        <div className="formInput">
+        <div className="submission">
             <label>{label}</label>
             <input {...inputProps} onChange={onChange} onBlur={handleFocus} onFocus={()=>inputProps.name==="confirmPassword" && setFocused(true)} focused={focused.toString()}/>
             <span>{errorMessage}</span>
