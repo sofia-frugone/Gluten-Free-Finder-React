@@ -38,6 +38,7 @@ export default class Registration extends Component {
       )
       .then((response) => {
         console.log("registration res", response);
+        localStorage.setItem("jwt", response.data.jwt);
       })
       .catch((error) => {
         console.log("registration error", error);
