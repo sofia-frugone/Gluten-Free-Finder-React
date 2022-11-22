@@ -1,6 +1,15 @@
 import "./filters.css"
 
+
+
 const CuisineDropdown = () => {
+
+
+
+
+
+
+
     return (  
         <div className="cuisine-dropdown">
             <label> 
