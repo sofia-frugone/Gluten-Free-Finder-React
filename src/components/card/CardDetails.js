@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
+import "./cardoverview.css";
 
 const CardDetails = () => {
   const { id } = useParams();
@@ -14,15 +15,26 @@ const CardDetails = () => {
   });
 
   return (
-    <div>
-      {error && <div>{error}</div>}
-      {isLoading && <div className="loading">Loading...</div>}
-      {data && !isLoading && (
-        <div className="card-details">
-          <h3>{data.restaurant_name}</h3>
-        </div>
-      )}
-    </div>
+    <center>
+      <div className="card-details">
+        {error && <div>{error}</div>}
+        {isLoading && <div className="loading">Loading...</div>}
+        {data && !isLoading && (
+          
+          <div className="card-content">
+            
+            <h3>{data.restaurant_name}</h3>
+            <p>{data.description}</p>
+            <h3>Overview</h3>
+            <p>
+              {data.street_number} {data.street_name} {data.suburb}{" "}
+              {data.postcode}
+            </p>
+            <p>{data.food_prep}</p>
+          </div>
+        )}
+      </div>
+    </center>
   );
 };
 

@@ -130,7 +130,7 @@ const SubmissionForm = () => {
         <div>An error occurred: {mutation.error.message}</div>
       ) : null}
 
-      {mutation.isSuccess ? <div>Todo added!</div> : null}
+      {mutation.isSuccess ? <div>Post added!</div> : null}
 
       <form onSubmit={handleSubmit}>
         <h1>Restaurant Submission Form</h1>
@@ -142,12 +142,6 @@ const SubmissionForm = () => {
             onChange={onChange}
           />
         ))}
-        <label>
-          {" "}
-          File upload (Upload any supporting documents JPG, PNG, PDF files
-          accepted)
-          <input type="file" />
-        </label>
 
         <button type="submit">Submit</button>
       </form>

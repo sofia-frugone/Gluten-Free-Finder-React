@@ -6,27 +6,25 @@ import { useNavigate } from "react-router-dom";
 function Registration() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [password_confirmation, setPassword_confirmation] = useState("");
   const navigate = useNavigate();
 
   const submitHandler = (e) => {
     e.preventDefault();
     axios
       // axios makes a post request to the api endpoint
-      .post("http://localhost:3000/auth/signup", {
+      .post("http://localhost:3000/auth/signin", {
         email: email,
         password: password,
-        password_confirmation: password_confirmation,
       })
       .then((response) => {
-        console.log("registration res", response);
+        console.log("login res", response);
         // setting the jwt in local storage
         localStorage.setItem("jwt", response.data.jwt);
-        // redirects the user to the home component on successful sign up
+        // redirects the user to the home component on successful login
         navigate("/");
       })
       .catch((error) => {
-        console.log("registration error", error);
+        console.log("login error", error);
       });
   };
 
@@ -34,7 +32,7 @@ function Registration() {
     <div className="registration">
       <center>
         <form onSubmit={submitHandler}>
-          <h1>Sign Up</h1>
+          <h1>Sign In</h1>
           <input
             type="text"
             name="email"
@@ -49,14 +47,7 @@ function Registration() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <input
-            type="password"
-            name="password_confirmation"
-            placeholder="Password Confirmation"
-            value={password_confirmation}
-            onChange={(e) => setPassword_confirmation(e.target.value)}
-          />
-          <button type="submit">Sign Up</button>
+          <button type="submit">Sign In</button>
         </form>
       </center>
     </div>
