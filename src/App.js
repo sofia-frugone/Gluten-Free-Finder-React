@@ -5,24 +5,14 @@ import CardDetails from "./components/card/CardDetails";
 import SubmissionForm from "./components/forms/SubmissionForm";
 import Registration from "./components/auth/Registration";
 import Footer from "./components/Footer";
-import {
-  QueryClient,
-  QueryClientProvider,
-} from "@tanstack/react-query";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Login from "./components/auth/Login";
-
-
-
-
-
+import Logout from "./components/auth/Logout";
 
 const queryClient = new QueryClient();
 
-
 const App = () => {
-
   return (
-    
     <QueryClientProvider client={queryClient}>
       <div className="App">
         <BrowserRouter>
@@ -31,20 +21,25 @@ const App = () => {
               <img src="/gff-logo.svg" alt="navbar logo" />
             </div>
             <h1>Gluten Free Finder</h1>
+
             <div className="links">
               <Link to="/">Home</Link>
-              <Link to="/registration">Sign Up</Link>
               <Link to="/create">Create New Post</Link>
+              <Link to="/logout">Log Out</Link>
+
+              <Link to="/registration">Sign Up</Link>
               <Link to="/login">Sign In</Link>
             </div>
           </nav>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/registration" element={<Registration />} />
             <Route path="/card/:id" element={<CardDetails />} />
-            <Route path="/create" element={<SubmissionForm />} />
-            <Route path="/login" element={<Login />} />
 
+            <Route path="/create" element={<SubmissionForm />} />
+            <Route path="/logout" element={<Logout />} />
+
+            <Route path="/registration" element={<Registration />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
           <Footer />
         </BrowserRouter>
