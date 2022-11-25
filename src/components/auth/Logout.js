@@ -1,7 +1,10 @@
+import { useNavigate } from "react-router-dom";
 
 function Logout() {
-    localStorage.clear();
-    window.location.href = '/';
+    const navigate = useNavigate();
+    
+    navigate("/");
+    
 
     console.log("logout");
 
@@ -11,7 +14,7 @@ function Logout() {
 
 
     return (
-        <div>Logout</div>
+        <div></div>
 
     );
 

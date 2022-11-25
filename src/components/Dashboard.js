@@ -1,18 +1,21 @@
 import { useState } from "react";
 import CardList from "./card/CardList";
-import CuisineDropdown from "./filters/CuisineDropdown";
 import SearchBar from "./filters/SearchBar";
-
-import SuburbSearch from "./filters/SuburbSearch";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
-const Home = () => {
+const Dashboard = () => {
   const { isLoading, error, data } = useQuery({
-    queryKey: ["repoData"],
+    queryKey: ["adminData"],
     queryFn: () =>
-      axios.get("http://localhost:3000/posts").then((res) => {
+      axios.get("http://localhost:3000/admin", {
+        headers: {
+            Authorization: localStorage.getItem("jwt"),
+        },
+      }).then((res) => {
+        console.log(res)
         return res.data;
+        
       }),
   });
 
@@ -22,10 +25,7 @@ const Home = () => {
   return (
     <div className="home">
       <SearchBar keyword={keyword} onChange={setKeyword} />
-      <div className="search-filters">
-        <CuisineDropdown />
-        <SuburbSearch />
-      </div>
+      <div className="search-filters"></div>
 
       {error && <div>{error}</div>}
       {isLoading && <div className="loading">Loading...</div>}
@@ -40,4 +40,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Dashboard;

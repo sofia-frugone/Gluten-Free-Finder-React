@@ -2,12 +2,15 @@ import { useState } from "react";
 import "./registration.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../../App.js";
+import React from "react";
 
 function Registration() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [password_confirmation, setPassword_confirmation] = useState("");
   const navigate = useNavigate();
+  const user = React.useContext(UserContext);
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -23,6 +26,7 @@ function Registration() {
         // setting the jwt in local storage
         localStorage.setItem("jwt", response.data.jwt);
         // redirects the user to the home component on successful sign up
+        user.setJwt(response.data.jwt);
         navigate("/");
       })
       .catch((error) => {
