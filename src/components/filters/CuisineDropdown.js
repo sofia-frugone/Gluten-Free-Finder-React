@@ -1,31 +1,27 @@
-import "./filters.css"
+import { useQuery } from "@tanstack/react-query";
 
+function CuisineDropdown() {
+  const { isLoading, error, data } = useQuery({
+    queryKey: ["cuisineData"],
+    queryFn: () =>
+      axios.get("http://localhost:3000/cuisines").then((res) => {
+        return res.data;
+      }),
+  });
 
-
-const CuisineDropdown = () => {
-
-
-
-
-
-
-
-    return (  
-        <div className="cuisine-dropdown">
-            <label> 
-                <select>
-                    <option value="italian">Italian</option>
-                    <option value="modern australian">Modern Australian</option>
-                    <option value="chinese">Chinese</option>
-                    <option value="japanese">Japanese</option>
-                </select>
-
-            </label>
+  return (
+    <div>
+      {error && <div>{error}</div>}
+      {isLoading && <div className="loading">Loading...</div>}
+      {data && data.posts && !isLoading && (
+        <select value={cuisine.name}>
             
+        </select>
 
-        </div>
-        
-    );
+
+       )}
+    </div>
+  );
 }
- 
+
 export default CuisineDropdown;
