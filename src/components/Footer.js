@@ -1,10 +1,14 @@
 const Footer = () => {
-    const year = new Date().getFullYear();
-  
-    return <footer>{`Copyright © Gluten Free Finder ${year}`}
-      <p><a href="*">Contact Us</a>  |   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo.</p>
-    </footer>;
-      
-  };
-  
-  export default Footer;
+  return (
+    <footer>
+      <p className="footer">
+        {" "}
+        Gluten Free Finder does not take any responsibility for any allergies
+        acquired while visiting the restaurants listed on our site. Please
+        contact the restaurant beforehand to disclose any allergies.
+      </p>
+    </footer>
+  );
+};
+
+export default Footer;

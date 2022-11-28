@@ -3,7 +3,9 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../App";
 import React from "react";
-//import { useQuery } from "@tanstack/react-query";
+import "./submission.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function SubmissionForm() {
   // setting initial input states for submission form
@@ -21,6 +23,12 @@ function SubmissionForm() {
 
   const [cuisineList, setCuisineList] = useState([]);
   const [foodPrepList, setFoodPrepList] = useState([]);
+
+  // submission success toast
+  const notify = () => toast("Submission sent to moderation!");
+
+  // submission unsuccessful toast
+  const errorNotify = () => toast("Something went wrong, try again!");
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -49,9 +57,11 @@ function SubmissionForm() {
 
         // redirects the user to the home component on successful submission
         navigate("/");
+        notify();
       })
       .catch((error) => {
         console.log("submission error", error);
+        errorNotify();
       });
   };
 
@@ -98,8 +108,13 @@ function SubmissionForm() {
   }, []);
 
   return (
-    <div>
+    <div className="submission">
       <center>
+        <p>
+          Are you a restaurant looking to promote on Gluten Free Finder? Please
+          fill out the submission form and one of our moderators will review
+          your post!
+        </p>
         <form onSubmit={submitHandler}>
           <h1>Submission Form</h1>
           <input
@@ -175,6 +190,7 @@ function SubmissionForm() {
           </select>
 
           <button type="submit">Submit</button>
+          <ToastContainer />
         </form>
       </center>
     </div>

@@ -14,7 +14,6 @@ const Home = () => {
   });
 
   const [keyword, setKeyword] = useState("");
-  console.log(keyword);
 
   return (
     <div className="home">

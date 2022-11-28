@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
 
 /* base styles */
 * {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 /* navbar styles */
@@ -14,8 +13,8 @@
   align-items: center;
   max-width: 100%;
   margin: 0 auto;
-  
-  background-color: #013B4E;
+
+  background-color: #013b4e;
 }
 
 .navbar h1 {
@@ -34,9 +33,8 @@
   color: #ffffff;
 }
 .navbar a:hover {
-  color: #3DB191;
+  color: #3db191;
 }
-
 
 /* banner styles */
 .home img {
@@ -44,10 +42,7 @@
   height: 500px;
 }
 
-
-
 /* filter styles */
-
 .search-filters {
   display: flex;
   justify-content: center;
@@ -55,28 +50,30 @@
   gap: 10px;
 }
 
-
-
 /* footer styles */
 footer {
   position: fixed;
-  background-color: #E6E6E6;
-  color: #646464;
-  font-size: 13px;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 10px;
+
+  background-color: #e6e6e6;
+  color: #646464;
+  font-size: 13px;
+
+  padding: 5px;
   text-align: center;
 }
 
+p.footer {
+  padding: 5px;
+}
 /* home card styles */
 .card-list {
   display: flex;
   flex-flow: row-wrap;
   justify-content: space-around;
   flex-wrap: wrap;
-  
 }
 
 .loading {
