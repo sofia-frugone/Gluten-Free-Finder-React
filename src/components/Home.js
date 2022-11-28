@@ -1,9 +1,6 @@
 import { useState } from "react";
 import CardList from "./card/CardList";
-import CuisineDropdown from "./filters/CuisineDropdown";
 import SearchBar from "./filters/SearchBar";
-
-import SuburbSearch from "./filters/SuburbSearch";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
@@ -22,10 +19,6 @@ const Home = () => {
   return (
     <div className="home">
       <SearchBar keyword={keyword} onChange={setKeyword} />
-      <div className="search-filters">
-        <CuisineDropdown />
-        <SuburbSearch />
-      </div>
 
       {error && <div>{error}</div>}
       {isLoading && <div className="loading">Loading...</div>}

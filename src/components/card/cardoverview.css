@@ -13,10 +13,59 @@
   padding: 10px 60px;
   border-radius: 5px;
   width: 400px;
-  height: 500px;
+  height: 600px;
   margin: 40px;
 }
 
 .card-content h3 {
-  color: pink;
+  font-size: 24px;
+  color: #3DB191;
+  padding-top: 190px;
+  text-align: left;
+}
+
+.card-content h2 {
+  font-size: 22px;
+  color: #3DB191;
+  padding-top: 50px;
+  text-align: left;
+}
+
+.card-content p {
+  font-size: 12px;
+  color:;
+  padding-top: 15px;
+  text-align: left;
+}
+
+button.approve {
+ 
+  width: 330px;
+  height: 40px;
+  padding: 10px 10px;
+  margin-top: 80px;
+  border: none;
+  background-color: #3db191;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+button.deny {
+ 
+  width: 330px;
+  height: 40px;
+  padding: 10px 10px;
+  margin-top: 10px;
+  border: none;
+  background-color: #FF2F2F;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }

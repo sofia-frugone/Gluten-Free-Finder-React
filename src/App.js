@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CardDetails from "./components/card/CardDetails";
 import SubmissionForm from "./components/forms/SubmissionForm";
 import Registration from "./components/auth/Registration";
-import Footer from "./components/Footer";
+//import Footer from "./components/Footer";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Login from "./components/auth/Login";
 import Navbar from "./components/Navbar";
@@ -13,6 +13,7 @@ import Dashboard from "./components/Dashboard";
 
 const queryClient = new QueryClient();
 
+// wrap app in user context to update jwt state and avoid refresh
 export const UserContext = React.createContext();
 
 const App = () => {
@@ -36,7 +37,7 @@ const App = () => {
               <Route path="/dashboard" element={<Dashboard />} />
               
             </Routes>
-            <Footer />
+            
           </BrowserRouter>
         </div>
       </QueryClientProvider>
