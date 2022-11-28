@@ -6,7 +6,7 @@ const SearchBar = ({ keyword, onChange }) => {
       <input
         key="search-bar"
         value={keyword}
-        placeholder={"Start typing to search for restaurants..."}
+        placeholder={"🔎 Start typing to search for restaurants..."}
         onChange={(e) => onChange(e.target.value)}
       />
     </div>

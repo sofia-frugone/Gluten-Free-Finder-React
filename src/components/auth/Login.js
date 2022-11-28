@@ -1,10 +1,10 @@
 import { useState } from "react";
 import "./registration.css";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../../App.js";
 import React from "react";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function Registration() {
@@ -62,7 +62,9 @@ function Registration() {
             onChange={(e) => setPassword(e.target.value)}
           />
           <button type="submit">Sign In</button>
-          <ToastContainer />
+
+          <Link to="/registration">Not a user? Link to sign up</Link>
+
         </form>
       </center>
     </div>
