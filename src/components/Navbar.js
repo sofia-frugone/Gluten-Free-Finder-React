@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../App.js";
 import React from "react";
 import jwt_decode from "jwt-decode";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function Navbar() {
@@ -48,7 +48,7 @@ function Navbar() {
         {jwt && decoded && decoded.role === "admin" && (
           <Link to="/dashboard">Dashboard</Link>
         )}
-        {jwt && <Link to="/create">Create New Post</Link>}
+        {jwt && <Link to="/create">New Listing</Link>}
         {jwt && (
           <Link onClick={logoutHandler} to="/logout">
             Log Out
@@ -57,7 +57,7 @@ function Navbar() {
 
         {!jwt && <Link to="/registration">Sign Up</Link>}
         {!jwt && <Link to="/login">Sign In</Link>}
-        <ToastContainer />
+   
       </div>
     </nav>
   );

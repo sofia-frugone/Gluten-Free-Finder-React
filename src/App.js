@@ -10,6 +10,7 @@ import Login from "./components/auth/Login";
 import Navbar from "./components/Navbar";
 import React, { useState } from "react";
 import Dashboard from "./components/Dashboard";
+import { ToastContainer } from 'react-toastify';
 
 const queryClient = new QueryClient();
 
@@ -18,7 +19,6 @@ export const UserContext = React.createContext();
 
 const App = () => {
   const [jwt, setJwt] = useState(localStorage.getItem("jwt"))
-  console.log("app is render");
   return (
     <UserContext.Provider value={{ jwt, setJwt }}>
       <QueryClientProvider client={queryClient}>
@@ -38,6 +38,7 @@ const App = () => {
               
             </Routes>
             <Footer />
+            <ToastContainer />
           </BrowserRouter>
         </div>
       </QueryClientProvider>

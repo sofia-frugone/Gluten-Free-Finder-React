@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../App";
 import React from "react";
 import "./submission.css";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function SubmissionForm() {
@@ -54,6 +54,7 @@ function SubmissionForm() {
       )
       .then((response) => {
         console.log("submission res", response);
+        console.log(user);
 
         // redirects the user to the home component on successful submission
         navigate("/");
@@ -111,9 +112,9 @@ function SubmissionForm() {
     <div className="submission">
       <center>
         <p>
-          Are you a restaurant looking to promote on Gluten Free Finder? Please
-          fill out the submission form and one of our moderators will review
-          your post!
+          💰 Are you a restaurant owner looking to promote on Gluten Free Finder?
+          Please fill out the submission form and one of our moderators will
+          review your post! 💰
         </p>
         <form onSubmit={submitHandler}>
           <h1>Submission Form</h1>
@@ -190,7 +191,6 @@ function SubmissionForm() {
           </select>
 
           <button type="submit">Submit</button>
-          <ToastContainer />
         </form>
       </center>
     </div>

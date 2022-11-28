@@ -86,10 +86,10 @@ const CardDetails = () => {
         {data && !isLoading && (
           <div className="card-content">
             <img src="../placeholder.png" alt="placeholder" />
-            <h3>{data.restaurant_name}</h3>
+            <h3>🌟 {data.restaurant_name}</h3>
             <p>{data.description}</p>
 
-            <h2>Overview</h2>
+            <h2>🤤 Overview</h2>
             <p>
               {data.street_number} {data.street_name} {data.suburb}{" "}
               {data.postcode}

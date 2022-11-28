@@ -17,3 +17,10 @@
   outline: solid 1px #c7c7c7;
   width: 730px;
 }
+
+/* refine styles */
+
+.refine p {
+  display: flex;
+  justify-content: center;
+}

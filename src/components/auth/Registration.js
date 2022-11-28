@@ -1,10 +1,10 @@
 import { useState } from "react";
 import "./registration.css";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../../App.js";
 import React from "react";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function Registration() {
@@ -23,8 +23,8 @@ function Registration() {
   const submitHandler = (e) => {
     e.preventDefault();
     axios
-      // axios makes a post request to the api endpoint
-      .post("https://gluten-free-finder-api.herokuapp.com/auth/signup", {
+      // axios makes a POST request to the api endpoint
+      .post("https://gluten-free-finder-api.herokuapp.com/auth/signin", {
         email: email,
         password: password,
         password_confirmation: password_confirmation,
@@ -69,8 +69,10 @@ function Registration() {
             value={password_confirmation}
             onChange={(e) => setPassword_confirmation(e.target.value)}
           />
-          <button type="submit">Sign Up</button>
-          <ToastContainer />
+          <button type="submit">🚀 Sign Up</button>
+
+          <Link to="/login">Already a user? Link to sign in</Link>
+
         </form>
       </center>
     </div>
