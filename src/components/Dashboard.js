@@ -9,7 +9,7 @@ const Dashboard = () => {
     queryKey: ["adminData"],
     queryFn: () =>
       axios
-        .get("http://localhost:3000/admin", {
+        .get("https://gluten-free-finder-api.herokuapp.com/admin", {
           headers: {
             Authorization: localStorage.getItem("jwt"),
           },

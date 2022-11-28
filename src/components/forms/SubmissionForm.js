@@ -35,7 +35,7 @@ function SubmissionForm() {
     axios
       // axios makes a POST request to the api endpoint
       .post(
-        "http://localhost:3000/posts",
+        "https://gluten-free-finder-api.herokuapp.com/posts",
         {
           restaurant_name: restaurant_name,
           street_name: street_name,
@@ -68,7 +68,7 @@ function SubmissionForm() {
   // fetch cuisines
   const fetchCuisines = () => {
     axios
-      .get("http://localhost:3000/cuisines")
+      .get("https://gluten-free-finder-api.herokuapp.com/cuisines")
       .then((response) => {
         const { data } = response;
         if (response.status === 200) {
@@ -89,7 +89,7 @@ function SubmissionForm() {
   // fetch food prep
   const fetchFoodPrep = () => {
     axios
-      .get("http://localhost:3000/food_preps")
+      .get("https://gluten-free-finder-api.herokuapp.com/food_preps")
       .then((response) => {
         const { data } = response;
         if (response.status === 200) {
