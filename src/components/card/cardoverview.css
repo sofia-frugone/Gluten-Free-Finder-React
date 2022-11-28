@@ -1,3 +1,4 @@
+/* card details styles*/
 .card-details {
   display: flex;
   flex-direction: column;
@@ -17,33 +18,40 @@
   margin: 40px;
 }
 
+.card-content img {
+  height: 120px;
+  width: 350px;
+  margin: 5px;
+  border-radius: 10px;
+  padding-top: 35px;
+}
+
 .card-content h3 {
   font-size: 24px;
-  color: #3DB191;
-  padding-top: 190px;
+  color: #3db191;
+  padding-top: 50px;
   text-align: left;
 }
 
 .card-content h2 {
   font-size: 22px;
-  color: #3DB191;
+  color: #3db191;
   padding-top: 50px;
   text-align: left;
 }
 
 .card-content p {
-  font-size: 12px;
-  color:;
+  font-size: 14px;
+  color: ;
   padding-top: 15px;
   text-align: left;
 }
 
 button.approve {
- 
   width: 330px;
   height: 40px;
   padding: 10px 10px;
-  margin-top: 80px;
+  margin-top: 50px;
   border: none;
   background-color: #3db191;
   color: white;
@@ -55,13 +63,27 @@ button.approve {
 }
 
 button.deny {
- 
   width: 330px;
   height: 40px;
   padding: 10px 10px;
   margin-top: 10px;
   border: none;
-  background-color: #FF2F2F;
+  background-color: #ff2f2f;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+button.home {
+  width: 330px;
+  height: 40px;
+  padding: 10px 10px;
+  margin-top: 80px;
+  border: none;
+  background-color: #3db191;
   color: white;
   font-size: 16px;
   font-weight: 600;

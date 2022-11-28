@@ -8,19 +8,18 @@ const Dashboard = () => {
   const { isLoading, error, data } = useQuery({
     queryKey: ["adminData"],
     queryFn: () =>
-      axios.get("http://localhost:3000/admin", {
-        headers: {
+      axios
+        .get("http://localhost:3000/admin", {
+          headers: {
             Authorization: localStorage.getItem("jwt"),
-        },
-      }).then((res) => {
-        console.log(res)
-        return res.data;
-        
-      }),
+          },
+        })
+        .then((res) => {
+          return res.data;
+        }),
   });
 
   const [keyword, setKeyword] = useState("");
-  console.log(keyword);
 
   return (
     <div className="home">

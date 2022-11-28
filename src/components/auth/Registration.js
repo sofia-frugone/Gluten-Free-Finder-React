@@ -4,6 +4,8 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../App.js";
 import React from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Registration() {
   const [email, setEmail] = useState("");
@@ -11,6 +13,12 @@ function Registration() {
   const [password_confirmation, setPassword_confirmation] = useState("");
   const navigate = useNavigate();
   const user = React.useContext(UserContext);
+
+  // sign up success toast
+  const notify = () => toast("Sign up successful!");
+
+  // sign up unsuccessful toast
+  const errorNotify = () => toast("Something went wrong, try again!");
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -22,15 +30,16 @@ function Registration() {
         password_confirmation: password_confirmation,
       })
       .then((response) => {
-        console.log("registration res", response);
         // setting the jwt in local storage
         localStorage.setItem("jwt", response.data.jwt);
         // redirects the user to the home component on successful sign up
         user.setJwt(response.data.jwt);
         navigate("/");
+        notify();
       })
       .catch((error) => {
         console.log("registration error", error);
+        errorNotify();
       });
   };
 
@@ -61,6 +70,7 @@ function Registration() {
             onChange={(e) => setPassword_confirmation(e.target.value)}
           />
           <button type="submit">Sign Up</button>
+          <ToastContainer />
         </form>
       </center>
     </div>
