@@ -24,7 +24,7 @@ function Registration() {
     e.preventDefault();
     axios
       // axios makes a POST request to the api endpoint
-      .post("http://localhost:3000/auth/signin", {
+      .post("https://gluten-free-finder-api.herokuapp.com/auth/signin", {
         email: email,
         password: password,
       })

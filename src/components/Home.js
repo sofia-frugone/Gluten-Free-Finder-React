@@ -8,7 +8,7 @@ const Home = () => {
   const { isLoading, error, data } = useQuery({
     queryKey: ["repoData"],
     queryFn: () =>
-      axios.get("http://localhost:3000/posts").then((res) => {
+      axios.get("https://gluten-free-finder-api.herokuapp.com/posts").then((res) => {
         return res.data;
       }),
   });

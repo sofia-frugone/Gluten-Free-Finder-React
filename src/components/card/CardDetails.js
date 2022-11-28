@@ -27,7 +27,7 @@ const CardDetails = () => {
   const { isLoading, error, data } = useQuery({
     queryKey: ["repoIndividualData"],
     queryFn: () =>
-      axios.get(`http://localhost:3000/posts/${id}`).then((res) => {
+      axios.get(`https://gluten-free-finder-api.herokuapp.com/posts/${id}`).then((res) => {
         return res.data;
       }),
   });
@@ -39,8 +39,9 @@ const CardDetails = () => {
   const handleDelete = (e) => {
     e.preventDefault();
     axios
-      .delete(`http://localhost:3000/posts/${id}`, { headers })
+      .delete(`https://gluten-free-finder-api.herokuapp.com/posts/${id}`, { headers })
       .then((response) => {
+        console.log("delete res", response);
         navigate("/dashboard");
       })
       .catch((error) => {
@@ -52,7 +53,7 @@ const CardDetails = () => {
   const mutation = useMutation({
     mutationFn: (approvePost) => {
       //setting token as the header as we send a POST request
-      return axios.put(`http://localhost:3000/posts/${id}`, approvePost, {
+      return axios.put(`https://gluten-free-finder-api.herokuapp.com/posts/${id}`, approvePost, {
         headers: {
           Authorization: localStorage.getItem("jwt"),
         },
