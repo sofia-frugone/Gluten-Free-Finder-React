@@ -288,9 +288,13 @@ Each task on the Trello board was worked through according to their prioritisati
 
 At the end of each sprint, we checked what had been completed on the Trello tasks and marked them done or moved them into the sprint backlog. This mainly occurred when we ran into problems with our data call formatting from the frontend to the back nd, which was more complex than we expected. 
 
-Our PART A documentation included some features that we unfortunately didn't have time for due to time constraints. The main features being image upload and a checkbox on the sign up page where users could specify that they were a restaurant. Due to the complexity of image uploads we decided to make the call to put this time and effort into refining the user experience in the app, image upload functionality is a time consuming feature that we would love to implement in the future when we have more time to get it right. We still wanted to display an image on our site for our restaurant cards so we went with a placeholder image instead. 
+Our PART A documentation included some features that we unfortunately didn't have time for due to time constraints. The main features being image upload and a checkbox on the sign up page where users could specify that they were a restaurant. In addition we did not have time to complete a minor feature of the admin having the ability to edit posts.
 
-The checkbox for the sign up page was for users to specify that they were a restaurant user opposed to a regular user. We did not plan to have a user dashboard or display the users role anywhere so we decided that this was unnecessary as the core app functionality is accessible even if a user does not sign up to the app. Therefore a user who signs up to the site is assumed to be a restaurant user looking to access the submission form functionality. 
+Due to the complexity of image uploads we decided to make the call to put this time and effort into refining the user experience in the app, image upload functionality is a time consuming feature that we would love to implement in the future when we have more time to get it right. We still wanted to display an image on our site for our restaurant cards so we went with a placeholder image instead.
+
+The checkbox for the sign up page was for users to specify that they were a restaurant user opposed to a regular user. We did not plan to have a user dashboard or display the users role anywhere so we decided that this was unnecessary as the core app functionality is accessible even if a user does not sign up to the app. Therefore a user who signs up to the site is assumed to be a restaurant user looking to access the submission form functionality.
+
+Our client is so satisfied with the final product that they are already discussing possible future projects - such as including location and maps which will connect the user to nearby restaurants according to their location.
 
 
 ### Trello
@@ -332,7 +336,7 @@ Frontend:
 
 - Login functionality.
 
-- Overcoming git and finding our groove with a git-flow. 
+- Overcoming git and finding our groove with a git-flow.
 
 
 
@@ -352,7 +356,7 @@ Backend:
 
 Frontend:
 
-- Basic Material-UI components for design.
+- Basic css styling and general component layout using flexbox css.
 
 - Footer styling. 
 
@@ -395,7 +399,9 @@ Frontend:
 Backend:
 
 - Active storage
+
 - s3 bucket and credentials. 
+
 - Cors functionality.
 
 
