@@ -2,7 +2,7 @@
 ## Megan Van Der Weide & Sofia-Bella Frugone
 
 --- 
-📣 Deployed App: 
+📣 Deployed App: https://amazing-genie-cf79c0.netlify.app  
 
 🔔 Deployed Backend: https://gluten-free-finder-api.herokuapp.com/
 
@@ -126,10 +126,12 @@ The API Backend tested using the following:
 - Rspec (please see rspec files) with 45 examples, 0 failures
 - CLIENT HTTP (please see client.http file), 13 examples, 0 failures
 - Postman examples:
-  ![Trello-Board-2](./img/postman1.png)
-  ![Trello-Board-2](./img/postman2.png)
-  ![Trello-Board-2](./img/postman3.png)
-    ![Trello-Board-2](./img/postman4.png)
+
+<img width="857" alt="postman1" src="https://user-images.githubusercontent.com/88522139/204470982-a95081b1-bd8d-4318-9b55-7d6f0cea88cb.png">
+<img width="845" alt="postman2" src="https://user-images.githubusercontent.com/88522139/204471002-f44c0d6a-77dd-4733-9885-c177fd388f01.png">
+<img width="836" alt="postman3" src="https://user-images.githubusercontent.com/88522139/204471014-7e8f645a-2715-4cda-9eef-a1c9851da2ad.png">
+<img width="856" alt="postman4" src="https://user-images.githubusercontent.com/88522139/204471022-3ff6b116-e79d-4e0e-8967-ee9641c5f08d.png">
+
   
 <!-- Screen Recordings of Evidence of Testing:
 Live Production Loom -->
@@ -210,17 +212,39 @@ complimentary react libraries.
 
 - **Web-vitals ^2.1.4:** Gem used to show how the pages perform based on real world usage data. It assists in seeing the ‘page experiences’ and overall UX. Provides a way of judging whether the elements are good or poor placements. and quantifies the measurement for page speed and user interactions. 
 
-- **Tanstack:** libraries for managing server state. It wrangles all forms of async data in React without touching any "global state". Utilities usd for complex workflows like Data Management, Data Visualization, Charts, Tables, and UI Components.
+- **Tanstack ^4.16.1:** libraries for managing server state. It wrangles all forms of async data in React without touching any "global state". Utilities usd for complex workflows like Data Management, Data Visualization, Charts, Tables, and UI Components.
+
+- **React-Toastify ^9.1.1:** This tool allows you to easily add and configure toast notifications for your app.
 
 ---
 
 ## Screenshots:
 **Homepage**
+<img width="1433" alt="gff-home" src="https://user-images.githubusercontent.com/88522139/204482894-0b1ae0d4-5ed5-47e1-acdf-ef4fab3b47e7.png">
+
 **Restaurant Post**
+<img width="1433" alt="gff-card-overview" src="https://user-images.githubusercontent.com/88522139/204483083-268c4e6a-4661-4827-b568-8a880dcce108.png">
+
 **Sign up**
+<img width="1328" alt="gff-signup" src="https://user-images.githubusercontent.com/88522139/204483116-a265c2dc-923b-4a81-8e7e-04938c3a54a0.png">
+
 **Sign in**
+<img width="1439" alt="gff-signin" src="https://user-images.githubusercontent.com/88522139/204483148-8f6e97fe-3726-4c4b-ad6f-7919966db254.png">
+
+
 **Create New Post**
+<img width="1387" alt="gff-submission-form" src="https://user-images.githubusercontent.com/88522139/204482932-7aefa5cf-601b-4de4-814f-915aad94de91.png">
+
 **Admin Dashboard**
+<img width="1435" alt="gff-admin-dash" src="https://user-images.githubusercontent.com/88522139/204483200-85182f50-7afd-4f0a-95ec-52d0474cda62.png">
+
+**Moderation**
+<img width="1438" alt="gff-moderation" src="https://user-images.githubusercontent.com/88522139/204483285-c699f662-92b3-4fab-aecc-06c1daca9f9b.png">
+
+**Search**
+<img width="1436" alt="gff-search" src="https://user-images.githubusercontent.com/88522139/204483312-f599d897-fb5a-4075-89cf-cda348c57c1f.png">
+
+
 ---
 
 ## Project Management
@@ -264,6 +288,10 @@ Each task on the Trello board was worked through according to their prioritisati
 
 At the end of each sprint, we checked what had been completed on the Trello tasks and marked them done or moved them into the sprint backlog. This mainly occurred when we ran into problems with our data call formatting from the frontend to the back nd, which was more complex than we expected. 
 
+Our PART A documentation included some features that we unfortunately didn't have time for due to time constraints. The main features being image upload and a checkbox on the sign up page where users could specify that they were a restaurant. Due to the complexity of image uploads we decided to make the call to put this time and effort into refining the user experience in the app, image upload functionality is a time consuming feature that we would love to implement in the future when we have more time to get it right. We still wanted to display an image on our site for our restaurant cards so we went with a placeholder image instead. 
+
+The checkbox for the sign up page was for users to specify that they were a restaurant user opposed to a regular user. We did not plan to have a user dashboard or display the users role anywhere so we decided that this was unnecessary as the core app functionality is accessible even if a user does not sign up to the app. Therefore a user who signs up to the site is assumed to be a restaurant user looking to access the submission form functionality. 
+
 
 ### Trello
 Our Trello’s were labelled with colour coding, which helped us understand each task's requirements and difficulty level quickly. 
@@ -280,7 +308,8 @@ Our labels were separated according to the following:
 
 - Priority level? Low, medium, high.
 
-![Trello-Board-2](./img/trello9.png)
+<img width="196" alt="trello9" src="https://user-images.githubusercontent.com/88522139/204471669-be5b916a-b8c2-4357-8298-022ac7cf901a.png">
+
 
 We are big list makers! And utilised Trello as a way of checking off our lists. Most tasks fell under both frontend and backend, but separating each Trello allowed us to see who was undertaking the task in different project stages. 
 
@@ -346,6 +375,9 @@ Backend:
 Frontend: 
 
 - Continue overall design for the front end of the app.
+- JWT tokens 
+
+- Conditional rendering of components and authorisation logic. 
 
 - Filtering 
 
@@ -388,13 +420,14 @@ Frontend:
 
 - Testing for frontend and client testing.
 
+<img width="1438" alt="trello1" src="https://user-images.githubusercontent.com/88522139/204471795-e51b435b-213d-4b4f-9eaa-5bc762d91210.png">
+<img width="1434" alt="trello2" src="https://user-images.githubusercontent.com/88522139/204471805-1991c627-64a3-458a-b2b9-ae4a31971b42.png">
+<img width="1276" alt="trello3" src="https://user-images.githubusercontent.com/88522139/204471811-7318e0d0-faf7-464f-95a2-cc184894ee5e.png">
+<img width="1304" alt="trello4" src="https://user-images.githubusercontent.com/88522139/204471850-78535d97-cdc8-4e2a-9f91-2007b033a25a.png">
+<img width="1427" alt="trello5" src="https://user-images.githubusercontent.com/88522139/204471862-0e6f638d-1ed5-4fe2-8fad-3e7feab1dc20.png">
+<img width="1430" alt="trello6" src="https://user-images.githubusercontent.com/88522139/204471871-cd65b148-efd4-4fea-a079-b85755785106.png">
+<img width="1389" alt="trello7" src="https://user-images.githubusercontent.com/88522139/204471875-a80cd9e2-3a7a-4d3e-a6ac-10fcb4b87c8f.png">
+<img width="1410" alt="trello8" src="https://user-images.githubusercontent.com/88522139/204471889-ae7af0a7-6292-42e4-9aad-4e95907ab976.png">
 
-![Trello-Board-1](./img/trello1.png)
-![Trello-Board-2](./img/trello2.png)
-![Trello-Board-2](./img/trello3.png)
-![Trello-Board-2](./img/trello4.png)
-![Trello-Board-2](./img/trello5.png)
-![Trello-Board-2](./img/trello6.png)
-![Trello-Board-2](./img/trello7.png)
-![Trello-Board-2](./img/trello8.png)
+
  
