@@ -5,6 +5,8 @@ import jwt_decode from "jwt-decode";
 import React from "react";
 import "./cardoverview.css";
 import { UserContext } from "../../App";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const CardDetails = () => {
   const { id } = useParams();
@@ -12,6 +14,13 @@ const CardDetails = () => {
   const user = React.useContext(UserContext);
   const { jwt } = user;
   let decoded;
+
+
+  // approve card toast
+  const notify = () => toast("Post approved!");
+
+  // delete card toast
+  const deleteNotify = () => toast("Post Deleted!");
 
   // decoding jwt to access user role
   if (!!jwt) {
@@ -42,7 +51,9 @@ const CardDetails = () => {
       .delete(`https://gluten-free-finder-api.herokuapp.com/posts/${id}`, { headers })
       .then((response) => {
         console.log("delete res", response);
+        deleteNotify();
         navigate("/dashboard");
+        
       })
       .catch((error) => {
         console.log("delete error", error);
@@ -68,6 +79,7 @@ const CardDetails = () => {
       live_status: true,
     };
     mutation.mutate(payload);
+    notify();
     navigate("/dashboard");
   };
 
