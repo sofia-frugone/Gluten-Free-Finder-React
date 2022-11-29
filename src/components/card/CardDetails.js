@@ -15,7 +15,6 @@ const CardDetails = () => {
   const { jwt } = user;
   let decoded;
 
-
   // approve card toast
   const notify = () => toast("Post approved!");
 
@@ -36,9 +35,11 @@ const CardDetails = () => {
   const { isLoading, error, data } = useQuery({
     queryKey: ["repoIndividualData"],
     queryFn: () =>
-      axios.get(`https://gluten-free-finder-api.herokuapp.com/posts/${id}`).then((res) => {
-        return res.data;
-      }),
+      axios
+        .get(`https://gluten-free-finder-api.herokuapp.com/posts/${id}`)
+        .then((res) => {
+          return res.data;
+        }),
   });
 
   //handle delete
@@ -48,12 +49,13 @@ const CardDetails = () => {
   const handleDelete = (e) => {
     e.preventDefault();
     axios
-      .delete(`https://gluten-free-finder-api.herokuapp.com/posts/${id}`, { headers })
+      .delete(`https://gluten-free-finder-api.herokuapp.com/posts/${id}`, {
+        headers,
+      })
       .then((response) => {
         console.log("delete res", response);
         deleteNotify();
         navigate("/dashboard");
-        
       })
       .catch((error) => {
         console.log("delete error", error);
@@ -64,11 +66,15 @@ const CardDetails = () => {
   const mutation = useMutation({
     mutationFn: (approvePost) => {
       //setting token as the header as we send a POST request
-      return axios.put(`https://gluten-free-finder-api.herokuapp.com/posts/${id}`, approvePost, {
-        headers: {
-          Authorization: localStorage.getItem("jwt"),
-        },
-      });
+      return axios.put(
+        `https://gluten-free-finder-api.herokuapp.com/posts/${id}`,
+        approvePost,
+        {
+          headers: {
+            Authorization: localStorage.getItem("jwt"),
+          },
+        }
+      );
     },
   });
 
@@ -93,6 +99,23 @@ const CardDetails = () => {
   return (
     <center>
       <div className="card-details">
+        <div className="container">
+          {jwt && decoded && decoded.role === "admin" && (
+            <button onClick={handleApprove} className="approve">
+              Approve
+            </button>
+          )}
+          {jwt && decoded && decoded.role === "admin" && (
+            <button onClick={handleDelete} className="deny">
+              Deny
+            </button>
+          )}
+          {jwt && decoded && decoded.role === "user" && (
+            <button onClick={handleHome} className="home">
+              Back to Home
+            </button>
+          )}
+        </div>
         {error && <div>{error}</div>}
         {isLoading && <div className="loading">Loading...</div>}
         {data && !isLoading && (
@@ -108,22 +131,6 @@ const CardDetails = () => {
             </p>
             <p>{data.cuisine}</p>
             <p>{data.food_prep}</p>
-
-            {jwt && decoded && decoded.role === "admin" && (
-              <button onClick={handleApprove} className="approve">
-                Approve
-              </button>
-            )}
-            {jwt && decoded && decoded.role === "admin" && (
-              <button onClick={handleDelete} className="deny">
-                Deny
-              </button>
-            )}
-            {jwt && decoded && decoded.role === "user" && (
-              <button onClick={handleHome} className="home">
-                Back to Home
-              </button>
-            )}
           </div>
         )}
       </div>
