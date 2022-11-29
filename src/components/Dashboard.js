@@ -23,6 +23,7 @@ const Dashboard = () => {
 
   return (
     <div className="home">
+      <h1>Admin Dashboard</h1>
       <SearchBar keyword={keyword} onChange={setKeyword} />
       <div className="search-filters"></div>
 
